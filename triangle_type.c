@@ -11,14 +11,14 @@ int main() {
     printf("Enter third side: ");
     scanf("%d", &c);
 
-    if(a + b <= c || b + c <= a || a + c <= b) {
-        printf("Invalid triangle");
+    if(a <= 0 || b <= 0 || c <= 0 || a + b <= c || b + c <= a || a + c <= b) {
+        printf("The given sides do not form a valid triangle.\n");
     } else if(a == b && b == c) {
-        printf("Equilateral \n");
+        printf("The triangle is equilateral\n");
     } else if((a == b && b != c) || (b == c && c != a) || (c == a && a != b)) {
-        printf("Isosceles \n");
+        printf("The triangle is isosceles\n");
     } else {
-        printf("Invalid side length");
+        printf("The triangle is scalene\n");
     }        
     
     return 0;
