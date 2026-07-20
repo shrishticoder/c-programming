@@ -3,6 +3,8 @@
 int main() {
     int a, b;
     char op, choice;
+
+    printf("\n===== Simple Calculator =====\n\n");
     do {
         printf("Enter first number: ");
         scanf("%d", &a);
@@ -15,24 +17,24 @@ int main() {
 
         switch (op) {
         case '+' : 
-            printf("Addition is : %d\n", a + b);
+            printf("%d + %d = %d\n", a, b, a + b);
             break;
         case '-' : 
-            printf("Subtraction is : %d\n", a - b);
+            printf("%d - %d = %d\n", a, b, a - b);
             break;
         case '*' : 
-            printf("Multiplication is : %d\n", a * b);
+            printf("%d * %d = %d\n", a, b, a * b);
             break;
         case '/' : 
             if(b != 0) {
-                printf("Division is : %d\n", a / b);
+                printf("%d / %d = %d\n", a, b, a / b);
             } else {
                 printf("Division by zero is undefined.\n");
             }
             break;
         case '%' : 
             if(b != 0) {
-                printf("Modulo is : %d\n", a % b);
+                printf("%d %% %d = %d\n", a, b, a % b);
             } else {
                 printf("Modulo by zero is undefined.\n");
             }
@@ -41,12 +43,12 @@ int main() {
             printf("Invalid operator\n");
     }
 
-    printf("Do you want to perform another calculation? (y/n): ");
+    printf("\nDo you want to perform another calculation? (y/n): ");
     scanf(" %c", &choice);
 
     } while (choice == 'y' || choice == 'Y');
     
-    printf("Thank you!\n");
+    printf("Thank you for using this calculator!\n");
 
     return 0;
 }
