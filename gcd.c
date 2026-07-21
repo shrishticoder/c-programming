@@ -21,7 +21,7 @@ int main() {
                 gcd = i;
             }
         }
-        printf("GCD is %d", gcd);
+        printf("GCD of %d and %d = %d\n", a, b, gcd);
     }
     
     
