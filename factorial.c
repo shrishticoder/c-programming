@@ -10,9 +10,9 @@ int main() {
         for(int i = 1; i <= n; i++) {
             fact = fact * i;
         } 
-        printf("Factorial is : %d\n", fact);
+        printf("Factorial of %d = %d\n", n, fact);
     } else {
-        printf("Factorial is not defined");
+        printf("Factorial is not defined for negative numbers.\n");
     }
 
     return 0;
